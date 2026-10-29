@@ -149,20 +149,21 @@ while (true) {
             break;
         } else if (choice === "1") {
             if (inventory.includes("черемшуля")) {
-                alert("Черемшуля уже у вас.")
-            }
-        } else {
-            const takeItem = confirm("На грядке растет магическая черемшуля. Взять ее?"
-            );
-            if (takeItem === true) {
-                inventory.push("черемшуля");
-                alert("Черемшуля добавлена в рюкзак!");
+                alert("Черемшуля уже у вас.");
             } else {
-                alert("Вы оставили черемшулю на грядке.")
+                const takeItem = confirm("На грядке растет магическая черемшуля. Взять ее?");
+                if (takeItem === true) {
+                    inventory.push("черемшуля");
+                    alert("Черемшуля добавлена в рюкзак!");
+                } else {
+                    alert("Вы оставили черемшулю на грядке.")
+                }
             }
+        } else if (choice === "2") {
+            room = "тоннель";
+        } else {
+            alert("Такого действия нет.")
         }
-    } else if (choice === "2") {
-        room = "тоннель";
     }
     else if (room === "кузница") {
         const choice = prompt(
@@ -247,4 +248,4 @@ while (true) {
         }
     }
 }
-alert("Игра завершена.");
+    alert("Игра завершена.");
