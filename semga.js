@@ -176,7 +176,7 @@ while (true) {
             break;
         } else if (choice === "1") {
             if (inventory.includes("бурмалдуйский меч")) {
-                alert("Бурмалдуйский меч уже у вас!");
+                alert("Бурмалдуйский меч уже у вас.");
             } else {
                 const takeItem = confirm("На наковальне лежал бурмалдуйский  меч. Взять?");
                 if (takeItem == true) {
@@ -184,6 +184,33 @@ while (true) {
                     alert("Вы получили бурмалдуйский меч!");
                 } else {
                     alert("Вы оставили меч в кузнице.");
+                }
+            }
+        } else if (choice === "2") {
+            room = "тоннель";
+        } else {
+            alert("Такого действия нет.")
+        }
+    }
+    else if (room === "алтарь") {
+        const choice = prompt(
+            "АЛТАРЬ СЕМГОВОГО МАСЛА\n" +
+            "1 — Осмотреть алтарь\n" +
+            "2 — Вернуться в тоннель\n" +
+            "0 — Выйти из игры"
+        );
+        if (choice === "0" || choice === null) {
+            break;
+        } else if (choice === "1") {
+            if (inventory.includes("маслице семги")) {
+                alert("Маслице семги уже у вас.");
+            } else {
+                const takeItem = confirm("На алтаре стоит маслице семги. Забрать?");
+                if (takeItem == true) {
+                    inventory.push("маслице семги");
+                    alert("Вы получили маслице семги!");
+                } else {
+                    alert("Вы оставили маслице на алтаре.");
                 }
             }
         } else if (choice === "2") {
