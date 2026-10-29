@@ -33,7 +33,7 @@ while (true) {
         } else if (choice === "1") {
             room = "Шующий коридор";
         } else if (choice === "2") {
-            room = "Тоннель зеленых испарений";
+            room = "тоннель";
         } else if (choice === "3") {
             showInventory();
         } else {
